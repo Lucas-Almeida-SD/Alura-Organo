@@ -5,7 +5,7 @@ import './style.scss';
 
 function InputText({ label, placeholder, id }) {
   return (
-    <div className="input-container">
+    <div className="input-text-container">
       <label htmlFor={id}>{`${label}`}</label>
       <input id={id} type="text" placeholder={placeholder} />
     </div>

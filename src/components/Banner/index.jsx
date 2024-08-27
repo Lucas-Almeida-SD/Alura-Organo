@@ -6,7 +6,7 @@ import './style.scss';
 
 function Banner() {
   return (
-    <header className="header">
+    <header className="banner-header">
       <img src={bannerImg} alt="Banner do site" />
     </header>
   );

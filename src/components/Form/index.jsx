@@ -6,7 +6,7 @@ import './style.scss';
 function Form() {
   return (
     <section className="colaborator-section">
-      <form>
+      <form className="colaborator-form">
         <h2>Preencha os dados para criar o card do colaborador.</h2>
         <div className="form-input-container">
           <InputText id="name" label="Nome" placeholder="Digite seu nome" />
