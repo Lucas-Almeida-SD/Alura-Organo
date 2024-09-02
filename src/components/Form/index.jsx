@@ -1,9 +1,20 @@
 import React from 'react';
 import InputText from '../InputText';
+import Select from '../Select';
 
 import './style.scss';
 
 function Form() {
+  const teamList = [
+    'Programação',
+    'Front-End',
+    'Data Science',
+    'Devops',
+    'UX e Design',
+    'Mobile',
+    'Inovação e Gestão',
+  ];
+
   return (
     <section className="colaborator-section">
       <form className="colaborator-form">
@@ -12,6 +23,7 @@ function Form() {
           <InputText id="name" label="Nome" placeholder="Digite seu nome" />
           <InputText id="cargo" label="Cargo" placeholder="Digite seu cargo" />
           <InputText id="imagem" label="Imagem" placeholder="Informe o endereço da imagem" />
+          <Select dataList={teamList} label="Time" id="team" />
         </div>
       </form>
     </section>
