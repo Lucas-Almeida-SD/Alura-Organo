@@ -1,6 +1,7 @@
 import React from 'react';
 import InputText from '../InputText';
 import Select from '../Select';
+import Button from '../Button';
 
 import './style.scss';
 
@@ -24,6 +25,7 @@ function Form() {
           <InputText id="cargo" label="Cargo" placeholder="Digite seu cargo" />
           <InputText id="imagem" label="Imagem" placeholder="Informe o endereço da imagem" />
           <Select dataList={teamList} label="Time" id="team" />
+          <Button isSubmit label="Criar card" />
         </div>
       </form>
     </section>
