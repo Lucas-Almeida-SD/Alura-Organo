@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Team from '../Team';
+import addBtn from '../../assets/imagens/add.png';
 
 import './style.scss';
 
@@ -10,7 +11,12 @@ function TeamList({ teams }) {
 
   return (
     <section className="team-list-section">
-      <h2 className="title">Minha Organização</h2>
+      <div className="title-container">
+        <h2 className="title">Minha Organização</h2>
+        <button className="add-colaborator-btn" type="button" aria-label="add collaborator">
+          <img src={addBtn} alt="Botão para adicionar colaborador" />
+        </button>
+      </div>
       {teamValueList.map((teamValues) => <Team key={teamValues.name} team={teamValues} />)}
     </section>
   );
