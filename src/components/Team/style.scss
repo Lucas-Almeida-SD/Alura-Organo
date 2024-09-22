@@ -1,0 +1,42 @@
+.team-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+
+  .collaborators-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+}
+
+.team-section.programacao {
+  background-color: var(--color-team-programacao-background);
+}
+
+.team-section.frontEnd {
+  background-color: var(--color-team-frontend-background);
+}
+
+.team-section.dataScience {
+  background-color: var(--color-team-datascience-background);
+}
+
+.team-section.devops {
+  background-color: var(--color-team-devops-background);
+}
+
+.team-section.uxAndDesign {
+  background-color: var(--color-team-ux-background);
+}
+
+.team-section.mobile {
+  background-color: var(--color-team-mobile-background);
+}
+
+.team-section.innovationAndManagement {
+  background-color: var(--color-team-inovacao-background);
+}
