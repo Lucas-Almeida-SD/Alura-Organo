@@ -14,8 +14,8 @@ function CollaboratorCard({ collaborator }) {
         </div>
       </header>
       <div className="collaborator-info">
-        <h4 className="collaborator-name">{name}</h4>
-        <p className="collaborator-role">{role}</p>
+        <h4 className="collaborator-name text">{name}</h4>
+        <p className="collaborator-role text">{role}</p>
       </div>
     </div>
   );
