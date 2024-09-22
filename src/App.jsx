@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Toaster } from 'react-hot-toast';
 
 import './App.scss';
 import Banner from './components/Banner';
@@ -35,6 +36,7 @@ function App() {
         setCollaborator={setCollaborator}
       />
       <TeamList teams={teams} />
+      <Toaster />
     </div>
   );
 }
