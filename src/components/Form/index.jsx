@@ -16,9 +16,30 @@ function Form({
     setCollaborator({ ...collaborator, [name]: value });
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const {
+      [Object.keys(teams)[0]]: { name: teamName },
+      [collaborator.team]: team,
+    } = teams;
+
+    setTeams({
+      ...teams,
+      [collaborator.team]: { ...team, collaborators: [...team.collaborators, collaborator] },
+    });
+
+    setCollaborator({
+      name: '',
+      role: '',
+      image: '',
+      team: teamName,
+    });
+  };
+
   return (
     <section className="colaborator-section">
-      <form className="colaborator-form">
+      <form className="colaborator-form" onSubmit={handleSubmit}>
         <h2>Preencha os dados para criar o card do colaborador.</h2>
         <div className="form-input-container">
           <InputText
