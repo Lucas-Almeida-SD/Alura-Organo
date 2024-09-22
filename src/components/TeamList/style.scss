@@ -1,23 +1,50 @@
 .team-list-section {
   display: flex;
   flex-direction: column;
-  .title {
-    text-align: center;
-    font-size: 32px;
-    color: var(--color-primary);
-    margin-bottom: 60px;
-    margin-top: 30px;
-    position: relative;
 
-    &::after {
-      content: '';
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 140px;
+    margin-bottom: 20px;
+    position: relative;
+    // background: var(--color-gray-3);
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      color: var(--color-primary);
+      position: relative;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 2px;
+        background-color: var(--color-primary);
+      }
+    }
+
+    .add-colaborator-btn {
       position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 2px;
-      background-color: var(--color-primary);
+      right: 80px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: none;
+      background-color: var(--color-white);
+      cursor: pointer;
+
+      img {
+        width: 100%;
+      }
     }
   }
+
 }
