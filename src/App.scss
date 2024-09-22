@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap');
+
 :root {
   --color-gray-1: rgb(246, 246, 246);
   --color-gray-2: rgb(33, 33, 33);
@@ -25,10 +27,26 @@
   --color-team-ux-emphasis: #DB6EBF;
   --color-team-mobile-emphasis: #FFBA05;
   --color-team-inovacao-emphasis: #FF8A29;
+
+  --font-family-title: "Prata", sans-serif;
+  --font-family-text: "Montserrat", serif;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.title, .subtitle {
+  font-family: var(--font-family-title);
+  font-weight: 100;
+}
+
+.text {
+  font-family: var(--font-family-text);
+}
+
+label.text, button.text {
+  font-weight: 600;
 }
