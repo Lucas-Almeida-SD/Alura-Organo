@@ -6,4 +6,8 @@
   background-color: var(--color-purple-1);
   border: none;
   cursor: pointer;
+
+  &:hover {
+    color: var(--color-secondary);
+  }
 }
