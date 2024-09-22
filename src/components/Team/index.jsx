@@ -13,7 +13,7 @@ function Team({ team }) {
 
   return (
     <section className={`team-section ${name}`}>
-      <h3 className="team-name">{label}</h3>
+      <h3 className={`team-name subtitle ${name}`}>{label}</h3>
       <div className="collaborators-container">
         {collaborators.map((collaborator) => (
           <CollaboratorCard key={collaborator.name} collaborator={collaborator} />

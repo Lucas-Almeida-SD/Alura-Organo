@@ -5,7 +5,7 @@ import './style.scss';
 
 function Button({ isSubmit, label }) {
   return (
-    <button className="button-form" type={isSubmit ? 'submit' : 'button'}>{label}</button>
+    <button className="button-form text" type={isSubmit ? 'submit' : 'button'}>{label}</button>
   );
 }
 

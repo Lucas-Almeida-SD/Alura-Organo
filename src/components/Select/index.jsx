@@ -8,10 +8,16 @@ function Select({
 }) {
   return (
     <div className="select-container">
-      <label htmlFor={id}>{label}</label>
-      <select name={name} id={id} value={value} onChange={handleChange}>
+      <label htmlFor={id} className="text">{label}</label>
+      <select className="text" name={name} id={id} value={value} onChange={handleChange}>
         {Object.keys(teams).map((teamKey) => (
-          <option key={teamKey} value={teams[`${teamKey}`].name}>{teams[`${teamKey}`].label}</option>))}
+          <option
+            key={teamKey}
+            value={teams[`${teamKey}`].name}
+          >
+            {teams[`${teamKey}`].label}
+          </option>
+        ))}
       </select>
     </div>
   );

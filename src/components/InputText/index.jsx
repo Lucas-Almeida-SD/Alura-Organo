@@ -8,11 +8,12 @@ function InputText({
 }) {
   return (
     <div className="input-text-container">
-      <label htmlFor={id}>{`${label}`}</label>
+      <label htmlFor={id} className="text">{`${label}`}</label>
       <input
         id={id}
         type="text"
         name={name}
+        className="text"
         value={value}
         onChange={handleChange}
         placeholder={placeholder}
