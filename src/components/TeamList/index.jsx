@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 
 import Team from '../Team';
 
+import './style.scss';
+
 function TeamList({ teams }) {
   const teamValueList = Object.values(teams);
 
   return (
     <section className="team-list-section">
-      <h2>Minha Organização</h2>
+      <h2 className="title">Minha Organização</h2>
       {teamValueList.map((teamValues) => <Team key={teamValues.name} team={teamValues} />)}
     </section>
   );
