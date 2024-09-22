@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 function InputText({
-  label, placeholder, id, name, value, handleChange,
+  label, placeholder, id, name, value, handleChange, isRequired,
 }) {
   return (
     <div className="input-text-container">
@@ -17,6 +17,7 @@ function InputText({
         value={value}
         onChange={handleChange}
         placeholder={placeholder}
+        required={isRequired}
       />
     </div>
   );
@@ -31,4 +32,9 @@ InputText.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
+  isRequired: PropTypes.bool,
+};
+
+InputText.defaultProps = {
+  isRequired: false,
 };
