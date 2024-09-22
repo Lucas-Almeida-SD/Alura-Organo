@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import toast from 'react-hot-toast';
 
 import InputText from '../InputText';
 import Select from '../Select';
@@ -35,6 +36,8 @@ function Form({
       image: '',
       team: teamName,
     });
+
+    toast.success('Colaborador cadastrado com sucesso!');
   };
 
   return (
