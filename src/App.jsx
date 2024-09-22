@@ -19,7 +19,7 @@ function App() {
     name: '',
     role: '',
     image: '',
-    team: teams.programacao.name,
+    team: teams[`${Object.keys(teams)[0]}`].name,
   });
 
   return (
