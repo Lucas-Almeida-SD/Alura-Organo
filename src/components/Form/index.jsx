@@ -1,28 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import InputText from '../InputText';
 import Select from '../Select';
 import Button from '../Button';
 
 import './style.scss';
 
-function Form() {
-  const teamList = [
-    'Programação',
-    'Front-End',
-    'Data Science',
-    'Devops',
-    'UX e Design',
-    'Mobile',
-    'Inovação e Gestão',
-  ];
-
-  const [collaborator, setCollaborator] = useState({
-    name: '',
-    role: '',
-    image: '',
-    team: teamList[0],
-  });
-
+function Form({
+  teams, setTeams, collaborator, setCollaborator,
+}) {
   const handleChange = ({ target }) => {
     const { name, value } = target;
 
@@ -59,7 +46,7 @@ function Form() {
             handleChange={handleChange}
           />
           <Select
-            dataList={teamList}
+            teams={teams}
             label="Time"
             id="form-team"
             name="team"
