@@ -49,6 +49,7 @@ function Form({
             name="name"
             value={collaborator.name}
             handleChange={handleChange}
+            isRequired
           />
           <InputText
             id="form-role"
@@ -57,6 +58,7 @@ function Form({
             name="role"
             value={collaborator.role}
             handleChange={handleChange}
+            isRequired
           />
           <InputText
             id="form-image"
@@ -65,6 +67,7 @@ function Form({
             name="image"
             value={collaborator.image}
             handleChange={handleChange}
+            isRequired
           />
           <Select
             teams={teams}
