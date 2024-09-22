@@ -1,0 +1,70 @@
+.collaborator-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  box-shadow: 4px 4px 8px var(--color-gray-3);
+
+  .collaborator-header {
+    height: 80px;
+    position: relative;
+
+    .image-container {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      top: 30px;
+      
+      img {
+        width: 100px;
+        border-radius: 50%;
+        background-color: var(--color-gray-1);
+      }
+    }
+
+  }
+
+  .collaborator-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8px;
+    margin: 62px 0 18px 0;
+    gap: 4px;
+
+    .collaborator-name, .collaborator-role {
+      text-align: center;
+    }
+  }
+
+  .collaborator-header.programacao {
+    background-color: var(--color-team-programacao-emphasis);
+  }
+  
+  .collaborator-header.frontEnd {
+    background-color: var(--color-team-frontend-emphasis);
+  }
+  
+  .collaborator-header.dataScience {
+    background-color: var(--color-team-datascience-emphasis);
+  }
+  
+  .collaborator-header.devops {
+    background-color: var(--color-team-devops-emphasis);
+  }
+  
+  .collaborator-header.uxAndDesign {
+    background-color: var(--color-team-ux-emphasis);
+  }
+  
+  .collaborator-header.mobile {
+    background-color: var(--color-team-mobile-emphasis);
+  }
+  
+  .collaborator-header.innovationAndManagement {
+    background-color: var(--color-team-inovacao-emphasis);
+  }
+}
