@@ -7,6 +7,7 @@ import Form from './components/Form';
 import TeamList from './components/TeamList';
 
 import utils from './utils';
+import Footer from './components/Footer';
 
 function App() {
   const [teams, setTeams] = useState({
@@ -36,6 +37,7 @@ function App() {
         setCollaborator={setCollaborator}
       />
       <TeamList teams={teams} />
+      <Footer />
       <Toaster />
     </div>
   );
