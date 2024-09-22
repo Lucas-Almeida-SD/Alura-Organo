@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './App.scss';
 import Banner from './components/Banner';
 import Form from './components/Form';
+import TeamList from './components/TeamList';
 
 function App() {
   const [teams, setTeams] = useState({
@@ -31,6 +32,7 @@ function App() {
         collaborator={collaborator}
         setCollaborator={setCollaborator}
       />
+      <TeamList teams={teams} />
     </div>
   );
 }
