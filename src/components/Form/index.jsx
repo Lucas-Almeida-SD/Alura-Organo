@@ -82,3 +82,86 @@ function Form({
 }
 
 export default Form;
+
+Form.propTypes = {
+  teams: PropTypes.shape({
+    programacao: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      collaborators: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        role: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        team: PropTypes.string.isRequired,
+      })).isRequired,
+    }),
+    frontEnd: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      collaborators: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        role: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        team: PropTypes.string.isRequired,
+      })).isRequired,
+    }),
+    dataScience: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      collaborators: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        role: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        team: PropTypes.string.isRequired,
+      })).isRequired,
+    }),
+    devops: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      collaborators: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        role: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        team: PropTypes.string.isRequired,
+      })).isRequired,
+    }),
+    uxAndDesign: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      collaborators: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        role: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        team: PropTypes.string.isRequired,
+      })).isRequired,
+    }),
+    mobile: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      collaborators: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        role: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        team: PropTypes.string.isRequired,
+      })).isRequired,
+    }),
+    innovationAndManagement: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      collaborators: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        role: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        team: PropTypes.string.isRequired,
+      })).isRequired,
+    }),
+  }).isRequired,
+  setTeams: PropTypes.func.isRequired,
+  collaborator: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    role: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    team: PropTypes.string.isRequired,
+  }).isRequired,
+  setCollaborator: PropTypes.func.isRequired,
+};
