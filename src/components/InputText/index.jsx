@@ -32,9 +32,5 @@ InputText.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
-  isRequired: PropTypes.bool,
-};
-
-InputText.defaultProps = {
-  isRequired: false,
+  isRequired: PropTypes.bool.isRequired,
 };
