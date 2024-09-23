@@ -9,7 +9,7 @@ import Button from '../Button';
 import './style.scss';
 
 function Form({
-  teams, setTeams, collaborator, setCollaborator,
+  teams, setTeams, collaborator, setCollaborator, showForm,
 }) {
   const handleChange = ({ target }) => {
     const { name, value } = target;
@@ -41,7 +41,7 @@ function Form({
   };
 
   return (
-    <section className="colaborator-section">
+    <section className={`colaborator-section ${showForm[0]}`}>
       <form className="colaborator-form" onSubmit={handleSubmit}>
         <h2 className="title">Preencha os dados para criar o card do colaborador.</h2>
         <div className="form-input-container">
@@ -170,4 +170,5 @@ Form.propTypes = {
     team: PropTypes.string.isRequired,
   }).isRequired,
   setCollaborator: PropTypes.func.isRequired,
+  showForm: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
