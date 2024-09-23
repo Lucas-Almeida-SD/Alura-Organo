@@ -6,14 +6,24 @@ import addBtn from '../../assets/imagens/add.png';
 
 import './style.scss';
 
-function TeamList({ teams }) {
+function TeamList({ teams, showForm, setShowForm }) {
   const teamValueList = Object.values(teams);
+
+  const handleClick = () => {
+    const reversed = [...showForm].reverse();
+    setShowForm(reversed);
+  };
 
   return (
     <section className="team-list-section">
       <div className="title-container">
         <h2 className="title">Minha Organização</h2>
-        <button className="add-colaborator-btn" type="button" aria-label="add collaborator">
+        <button
+          className="add-colaborator-btn"
+          type="button"
+          aria-label="add collaborator"
+          onClick={handleClick}
+        >
           <img src={addBtn} alt="Botão para adicionar colaborador" />
         </button>
       </div>
@@ -97,4 +107,6 @@ TeamList.propTypes = {
       })).isRequired,
     }),
   }).isRequired,
+  showForm: PropTypes.arrayOf(PropTypes.string).isRequired,
+  setShowForm: PropTypes.func.isRequired,
 };
