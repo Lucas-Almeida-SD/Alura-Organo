@@ -27,6 +27,8 @@ function App() {
     team: teams[`${Object.keys(teams)[0]}`].name,
   });
 
+  const [showForm, setShowForm] = useState(['display', 'hide']);
+
   return (
     <div className="App">
       <Banner />
@@ -35,8 +37,9 @@ function App() {
         setTeams={setTeams}
         collaborator={collaborator}
         setCollaborator={setCollaborator}
+        showForm={showForm}
       />
-      <TeamList teams={teams} />
+      <TeamList teams={teams} showForm={showForm} setShowForm={setShowForm} />
       <Footer />
       <Toaster />
     </div>
