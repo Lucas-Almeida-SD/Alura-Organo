@@ -6,6 +6,7 @@
   overflow: hidden;
   background-color: var(--color-white);
   box-shadow: 4px 4px 8px var(--color-gray-3);
+  position: relative;
 
   .collaborator-header {
     height: 80px;
@@ -78,5 +79,29 @@
   
   .collaborator-header.innovationAndManagement {
     background-color: var(--color-team-inovacao-emphasis);
+  }
+
+  .card-remove-btn {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      filter: brightness(0.8);
+    }
   }
 }
