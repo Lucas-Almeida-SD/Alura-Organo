@@ -6,7 +6,7 @@ import Banner from './components/Banner';
 import Form from './components/Form';
 import TeamList from './components/TeamList';
 
-import utils from './utils';
+import utils from './utils/utils';
 import Footer from './components/Footer';
 
 function App() {
