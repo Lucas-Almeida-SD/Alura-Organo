@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
+import cardRemove from '../../assets/imagens/remove.png';
+
 function CollaboratorCard({ collaborator }) {
   const { name, role, image } = collaborator;
 
@@ -17,6 +19,9 @@ function CollaboratorCard({ collaborator }) {
         <h4 className="collaborator-name text">{name}</h4>
         <p className="collaborator-role text">{role}</p>
       </div>
+      <button className="card-remove-btn" type="button" aria-label="Remove the card">
+        <img src={cardRemove} alt="Button to remove the card" />
+      </button>
     </div>
   );
 }
