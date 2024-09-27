@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
+import { collaboratorPropTypes } from '../../utils/propTypes';
 import cardRemove from '../../assets/imagens/remove.png';
 
 function CollaboratorCard({ collaborator }) {
@@ -29,10 +30,5 @@ function CollaboratorCard({ collaborator }) {
 export default CollaboratorCard;
 
 CollaboratorCard.propTypes = {
-  collaborator: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    role: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    team: PropTypes.string.isRequired,
-  }).isRequired,
+  collaborator: PropTypes.shape(collaboratorPropTypes).isRequired,
 };

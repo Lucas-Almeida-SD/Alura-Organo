@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import CollaboratorCard from '../CollaboratorCard';
+import { teamPropTypes } from '../../utils/propTypes';
 import './style.scss';
 
 function Team({ team }) {
@@ -26,14 +27,5 @@ function Team({ team }) {
 export default Team;
 
 Team.propTypes = {
-  team: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    collaborators: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      role: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-      team: PropTypes.string.isRequired,
-    })).isRequired,
-  }).isRequired,
+  team: PropTypes.shape(teamPropTypes).isRequired,
 };
