@@ -30,19 +30,21 @@ function Team({ team, setTeams }) {
       className={`team-section ${name}`}
       style={{ backgroundColor: colorConvert(0.15) }}
     >
-      <h3 className={`team-name subtitle ${name}`} style={{ borderColor: color }}>{label}</h3>
-      <div className="collaborators-container">
+      <div className="team-color-input-container">
         <input
           type="color"
-          className="team-color"
+          className="team-color-input"
           value={color}
           onChange={handleColorChange}
         />
+      </div>
+      <h3 className={`team-name subtitle ${name}`} style={{ borderColor: color }}>{label}</h3>
+      <div className="collaborators-container">
         {collaborators.map((collaborator) => (
           <CollaboratorCard
             key={collaborator.name}
             collaborator={collaborator}
-            color={collaborator}
+            color={color}
           />
         ))}
       </div>
