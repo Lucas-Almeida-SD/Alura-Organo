@@ -5,6 +5,7 @@ export const collaboratorPropTypes = {
   role: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   team: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export const teamPropTypes = {
