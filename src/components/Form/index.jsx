@@ -36,6 +36,7 @@ function Form({
       role: '',
       image: '',
       team: teamName,
+      id: crypto.randomUUID(),
     });
 
     toast.success('Colaborador cadastrado com sucesso!');

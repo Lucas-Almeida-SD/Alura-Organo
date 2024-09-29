@@ -39,6 +39,7 @@ function App() {
     role: '',
     image: '',
     team: teams[`${Object.keys(teams)[0]}`].name,
+    id: crypto.randomUUID(),
   });
 
   const [showForm, setShowForm] = useState(['display', 'hide']);
