@@ -7,45 +7,8 @@
 
   .team-name {
     font-size: 24px;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      width: 30px;
-      transform: translateX(-50%);
-      height: 2px;
-    }
-
-    &.programacao::after {
-      background-color: var(--color-team-programacao-emphasis);
-    }
-
-    &.frontEnd::after {
-      background-color: var(--color-team-frontend-emphasis);
-    }
-
-    &.dataScience::after {
-      background-color: var(--color-team-datascience-emphasis);
-    }
-
-    &.devops::after {
-      background-color: var(--color-team-devops-emphasis);
-    }
-
-    &.uxAndDesign::after {
-      background-color: var(--color-team-ux-emphasis);
-    }
-
-    &.mobile::after {
-      background-color: var(--color-team-mobile-emphasis);
-    }
-
-    &.innovationAndManagement::after {
-      background-color: var(--color-team-inovacao-emphasis);
-    }
+    border-bottom: 2px solid;
+    padding-bottom: 4px;
   }
 
   .collaborators-container {
@@ -54,32 +17,4 @@
     flex-wrap: wrap;
     gap: 28px;
   }
-}
-
-.team-section.programacao {
-  background-color: var(--color-team-programacao-background);
-}
-
-.team-section.frontEnd {
-  background-color: var(--color-team-frontend-background);
-}
-
-.team-section.dataScience {
-  background-color: var(--color-team-datascience-background);
-}
-
-.team-section.devops {
-  background-color: var(--color-team-devops-background);
-}
-
-.team-section.uxAndDesign {
-  background-color: var(--color-team-ux-background);
-}
-
-.team-section.mobile {
-  background-color: var(--color-team-mobile-background);
-}
-
-.team-section.innovationAndManagement {
-  background-color: var(--color-team-inovacao-background);
 }
