@@ -10,6 +10,7 @@ export const collaboratorPropTypes = {
 export const teamPropTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
   collaborators: PropTypes.arrayOf(PropTypes.shape(collaboratorPropTypes)).isRequired,
 };
 
