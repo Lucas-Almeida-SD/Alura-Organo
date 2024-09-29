@@ -11,13 +11,27 @@ import Footer from './components/Footer';
 
 function App() {
   const [teams, setTeams] = useState({
-    programacao: { name: 'programacao', label: 'Programação', collaborators: utils.teamsDataList.programacao },
-    frontEnd: { name: 'frontEnd', label: 'Front-End', collaborators: utils.teamsDataList.frontEnd },
-    dataScience: { name: 'dataScience', label: 'Data Science', collaborators: utils.teamsDataList.dataScience },
-    devops: { name: 'devops', label: 'Devops', collaborators: utils.teamsDataList.devops },
-    uxAndDesign: { name: 'uxAndDesign', label: 'UX e Design', collaborators: utils.teamsDataList.uxAndDesign },
-    mobile: { name: 'mobile', label: 'Mobile', collaborators: utils.teamsDataList.mobile },
-    innovationAndManagement: { name: 'innovationAndManagement', label: 'Inovação e Gestão', collaborators: utils.teamsDataList.innovationAndManagement },
+    programacao: {
+      name: 'programacao', label: 'Programação', color: '#57C278', collaborators: utils.teamsDataList.programacao,
+    },
+    frontEnd: {
+      name: 'frontEnd', label: 'Front-End', color: '#82CFFA', collaborators: utils.teamsDataList.frontEnd,
+    },
+    dataScience: {
+      name: 'dataScience', label: 'Data Science', color: '#A6D157', collaborators: utils.teamsDataList.dataScience,
+    },
+    devops: {
+      name: 'devops', label: 'Devops', color: '#E06B69', collaborators: utils.teamsDataList.devops,
+    },
+    uxAndDesign: {
+      name: 'uxAndDesign', label: 'UX e Design', color: '#DB6EBF', collaborators: utils.teamsDataList.uxAndDesign,
+    },
+    mobile: {
+      name: 'mobile', label: 'Mobile', color: '#FFBA05', collaborators: utils.teamsDataList.mobile,
+    },
+    innovationAndManagement: {
+      name: 'innovationAndManagement', label: 'Inovação e Gestão', color: '#FF8A29', collaborators: utils.teamsDataList.innovationAndManagement,
+    },
   });
 
   const [collaborator, setCollaborator] = useState({
@@ -39,7 +53,7 @@ function App() {
         setCollaborator={setCollaborator}
         showForm={showForm}
       />
-      <TeamList teams={teams} showForm={showForm} setShowForm={setShowForm} />
+      <TeamList teams={teams} setTeams={setTeams} showForm={showForm} setShowForm={setShowForm} />
       <Footer />
       <Toaster />
     </div>
