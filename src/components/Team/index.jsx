@@ -45,6 +45,7 @@ function Team({ team, setTeams }) {
             key={collaborator.name}
             collaborator={collaborator}
             color={color}
+            setTeams={setTeams}
           />
         ))}
       </div>
