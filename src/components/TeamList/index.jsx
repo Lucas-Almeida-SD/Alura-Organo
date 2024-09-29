@@ -7,7 +7,9 @@ import addBtn from '../../assets/imagens/add.png';
 
 import './style.scss';
 
-function TeamList({ teams, showForm, setShowForm }) {
+function TeamList({
+  teams, setTeams, showForm, setShowForm,
+}) {
   const teamValueList = Object.values(teams);
 
   const handleClick = () => {
@@ -28,7 +30,9 @@ function TeamList({ teams, showForm, setShowForm }) {
           <img src={addBtn} alt="Botão para adicionar colaborador" />
         </button>
       </div>
-      {teamValueList.map((teamValues) => <Team key={teamValues.name} team={teamValues} />)}
+      {teamValueList.map((teamValues) => (
+        <Team key={teamValues.name} team={teamValues} setTeams={setTeams} />
+      ))}
     </section>
   );
 }
@@ -37,6 +41,7 @@ export default TeamList;
 
 TeamList.propTypes = {
   teams: PropTypes.shape(teamsPropTypes).isRequired,
+  setTeams: PropTypes.func.isRequired,
   showForm: PropTypes.arrayOf(PropTypes.string).isRequired,
   setShowForm: PropTypes.func.isRequired,
 };
