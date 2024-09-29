@@ -6,12 +6,12 @@ import './style.scss';
 import { collaboratorPropTypes } from '../../utils/propTypes';
 import cardRemove from '../../assets/imagens/remove.png';
 
-function CollaboratorCard({ collaborator }) {
+function CollaboratorCard({ collaborator, color }) {
   const { name, role, image } = collaborator;
 
   return (
     <div className="collaborator-card">
-      <header className={`collaborator-header ${collaborator.team}`}>
+      <header className={`collaborator-header ${collaborator.team}`} style={{ backgroundColor: color }}>
         <div className="image-container">
           <img src={image} alt={`Colaborador(a) ${name}`} />
         </div>
@@ -31,4 +31,5 @@ export default CollaboratorCard;
 
 CollaboratorCard.propTypes = {
   collaborator: PropTypes.shape(collaboratorPropTypes).isRequired,
+  color: PropTypes.string.isRequired,
 };
