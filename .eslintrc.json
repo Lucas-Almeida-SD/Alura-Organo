@@ -9,6 +9,7 @@
         "sourceType": "module"
     },
     "rules": {
+        "react/require-default-props": "off"
     },
     "ignorePatterns": ["src/index.js"]
 }
