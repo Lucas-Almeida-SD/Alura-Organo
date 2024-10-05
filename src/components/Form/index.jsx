@@ -5,6 +5,7 @@ import { collaboratorPropTypes, teamsPropTypes } from '../../utils/propTypes';
 
 import './style.scss';
 import CreateCollaboratorForm from '../CreateCollaboratorForm';
+import CreateTeamForm from '../CreateTeamForm';
 
 function Form({
   teams, setTeams, collaborator, setCollaborator, showForm,
@@ -16,6 +17,9 @@ function Form({
         setCollaborator={setCollaborator}
         setTeams={setTeams}
         teams={teams}
+      />
+      <CreateTeamForm
+        setTeams={setTeams}
       />
     </section>
   );
