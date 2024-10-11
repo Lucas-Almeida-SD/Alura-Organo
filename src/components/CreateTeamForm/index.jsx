@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { toast } from 'react-hot-toast';
 
 import InputText from '../InputText';
 import InputColor from '../InputColor';
@@ -17,10 +18,21 @@ function CreateTeamForm({ setTeams }) {
     setNewTeam((previousValue) => ({ ...previousValue, [name]: value }));
   };
 
-  const handleSubmit = ({ target }) => {
-    target.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const { teamName, teamColor } = newTeam;
+    const formatTeamName = teamName.split(' ').join('');
 
-    setTeams((prev) => prev);
+    setTeams((previousValue) => ({
+      ...previousValue,
+      [formatTeamName]: {
+        name: formatTeamName, label: teamName, color: teamColor, collaborators: [],
+      },
+    }));
+
+    setNewTeam({ teamName: '', teamColor: '#6278f7' });
+
+    toast.success('Time cadastrado com sucesso!');
   };
 
   return (
