@@ -21,3 +21,21 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .input-color-container {
+
+    label {
+      font-size: 14px;
+    }
+
+    .input-color-content {
+      width: 20px;
+      height: 20px;
+    }
+
+    .input-color {
+      transform: scale(1.6);
+    }
+  }
+}

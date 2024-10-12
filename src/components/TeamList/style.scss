@@ -9,7 +9,6 @@
     height: 140px;
     margin-bottom: 20px;
     position: relative;
-    // background: var(--color-gray-3);
 
     .title {
       text-align: center;
@@ -46,5 +45,22 @@
       }
     }
   }
+}
 
+@media screen and (max-width: 800px) {
+  .team-list-section {
+  
+    .title-container {
+  
+      .title {
+        font-size: 24px;
+      }
+  
+      .add-colaborator-btn {
+        right: 12px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
 }

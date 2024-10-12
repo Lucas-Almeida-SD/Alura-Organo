@@ -11,3 +11,11 @@
     color: var(--color-secondary);
   }
 }
+
+@media screen and (max-width: 800px) {
+  .button-form {
+    font-size: 12px;
+    padding: 14px 20px;
+
+  }
+}

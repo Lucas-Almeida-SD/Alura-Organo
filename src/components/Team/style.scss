@@ -42,3 +42,23 @@
     gap: 28px;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .team-section {
+    padding: 32px 8px;
+  
+    .team-color-input-container {
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+    }
+  
+    .team-name {
+      font-size: 20px;
+    }
+
+    .collaborators-container {
+      gap: 20px;
+    }
+  }
+}

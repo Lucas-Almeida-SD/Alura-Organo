@@ -50,6 +50,30 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .create-form-section {
+
+    .form-create-select-container {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      
+      button {
+        width: 160px;
+      }
+    }
+  
+    .create-form {
+      width: 90%;
+      padding: 20px;
+
+      .title {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
 @keyframes display {
   0% {
     max-height: 0;

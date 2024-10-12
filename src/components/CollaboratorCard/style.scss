@@ -77,3 +77,40 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .collaborator-card {
+    width: 160px;
+  
+    .collaborator-header {
+      height: 60px;
+  
+      .image-container {
+        top: 20px;
+        
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+  
+    }
+  
+    .collaborator-info {
+      margin: 48px 0 18px 0;
+  
+      .collaborator-name {
+        font-size: 14px;
+      }
+  
+      .collaborator-role {
+        font-size: 12px;
+      }
+    }
+  
+    .card-remove-btn {
+      width: 20px;
+      height: 20px;  
+    }
+  }
+}

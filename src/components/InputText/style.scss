@@ -3,7 +3,12 @@
   flex-direction: column;
   gap: 8px;
 
+  label {
+    font-size: 16px;
+  }
+
   input {
+    font-size: 14px;
     border: none;
     padding: 18px;
     box-shadow: 2px 2px 8px var(--color-gray-3);
@@ -12,6 +17,19 @@
 
     &:focus {
       box-shadow: 0 0 0 1px var(--color-gray-4);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .input-text-container {
+
+    label {
+      font-size: 14px;
+    }
+  
+    input {
+      font-size: 12px;
     }
   }
 }

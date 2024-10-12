@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: space-around;
   padding: 48px 12px;
+  gap: 12px;
 
   .social-media-container {
     display: flex;
@@ -28,5 +29,30 @@
     color: var(--color-white);
     font-size: 16px;
     font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .page-footer {
+  
+    flex-direction: column;
+    padding: 36px 0;
+    gap: 48px;
+  
+    .social-media-container {
+  
+      .social-media-icon {
+        width: 20px;
+      }
+    }
+  
+    .logo-icon {
+      width: 120px;
+    }
+  
+    .developer {
+      text-align: center;
+      font-size: 14px;
+    }
   }
 }
